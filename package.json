@@ -1,0 +1,25 @@
+{
+  "name": "question-answer",
+  "version": "1.0.0",
+  "description": "Express Question-Answer",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "Express",
+    "rest",
+    "api"
+  ],
+  "author": "Mert Yigittop",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
