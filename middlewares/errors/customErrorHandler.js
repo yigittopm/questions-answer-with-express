@@ -4,6 +4,9 @@ const customErrorHandler = (err,req,res,next) => {
 
     let customError = err;
 
+    if(err.code === 11000){
+        customError = new CustomError("Duplicate Email Error", 400)
+    }
     if(err.name === "SyntaxError"){
         customError = new CustomError("Unexpected Syntax", 400)
     }
