@@ -1,9 +1,10 @@
 const express = require("express");
 const router = express.Router();
 
-const { register,testError } = require("../controllers/auth");
+const { getAccessToRoute } = require("../middlewares/authorization/auth");
+const { register,tokentest } = require("../controllers/auth");
 
-router.post("/register", register)
-router.get("/error", testError);
+router.post("/register", register);
+router.get("/tokentest",getAccessToRoute ,tokentest);
 
 module.exports = router;
